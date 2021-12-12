@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: tekton-tutorial-image
+spec:
+  type: image
+  params:
+    - name: url
+      # use docker registry
+      value: hub.docker.com/bsoma/buildapp:latest
